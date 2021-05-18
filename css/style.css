@@ -604,7 +604,7 @@ img {
 }
 
 .subscribe {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .subscribe-footer {
@@ -612,6 +612,7 @@ img {
   margin-right: 12px;
   width: 358px;
   height: 50px;
+  color: inherit;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -683,6 +684,7 @@ img {
   top: 50%;
   left: 50%;
   width: 528px;
+  height: 581px;
   max-height: 100vh;
   overflow-y: auto;
   padding: 40px 30px;
@@ -716,7 +718,8 @@ img {
   border-radius: 50%;
 }
 
-.close-button:hover .close-icon {
+.close-button:hover .close-icon,
+.close-button:focus .close-icon {
   fill: var(--color-highlight);
 }
 
@@ -761,7 +764,11 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   padding-left: 42px;
-  transition: border-color var(--animation);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  transition: border var(--animation);
+  outline: none;
 }
 
 .form-icon {
@@ -786,6 +793,10 @@ img {
   cursor: pointer;
 }
 
+.form-field:nth-child(5) {
+  margin-bottom: 20px;
+}
+
 .form-box {
   display: flex;
 }
@@ -802,9 +813,14 @@ img {
   line-height: 14px;
   letter-spacing: 0.01em;
   padding: 12px 16px;
-  color: rgba(117, 117, 117, 0.5);
+
   resize: none;
   transition: border-color var(--animation);
+  outline: none;
+}
+
+.form-comments::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-btn {
@@ -842,7 +858,6 @@ img {
   align-items: center;
   font-size: 14px;
   line-height: 1.71px;
-  margin-top: 20px;
 }
 
 .policy-link {
